@@ -8,6 +8,8 @@ public class Juego {
 	private int CANT_COLORES = 6;
 	private Color[][] grilla;
 	private Random random;
+	private int turnos;
+
 
 	public Juego() {
 		grilla = new Color[tamanio][tamanio];
@@ -17,6 +19,7 @@ public class Juego {
 	public void jugarTurno(int fila, int columna) {
 		Color nuevoColor = obtenerColorAleatorio();
 		grilla[fila][columna] = nuevoColor;
+		turnos ++;
 
 		if (tieneVecinoIgual(fila, columna, nuevoColor)) {
 			apagarCeldaYVecinos(fila, columna);
@@ -74,4 +77,9 @@ public class Juego {
 	public int getTamanio() {
 		return tamanio;
 	}
+	
+	public int getTurnos() {
+	    return turnos;
+	}
+
 }
