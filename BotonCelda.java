@@ -3,12 +3,8 @@ package interfaz;
 import javax.swing.JButton;
 
 public class BotonCelda extends JButton {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private int fila;
-    private int columna;
+	private int columna;
 
     public BotonCelda(int fila, int columna) {
         this.fila = fila;
